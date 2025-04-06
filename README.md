@@ -47,6 +47,5 @@ Added metafield to product from Shopify Admin:
 ### Step 1: Clone Github Repository Locally
 
 ```bash
-git clone 
-cd your-repo-name
-
+git clone https://github.com/sohail1822/Shopify_App
+cd Shopify_App
