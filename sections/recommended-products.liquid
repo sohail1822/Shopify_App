@@ -1,0 +1,111 @@
+<section class="recommended-products-wrapper">
+  {% assign recommended_products = product.metafields.custom.recommended_products.value %}
+
+  {% if recommended_products != blank %}
+    <h2 class="section-heading">Recommended Products</h2>
+
+    <div class="slider-container">
+      <button class="slider-btn prev-btn" onclick="scrollSlider(-1)">&#10094;</button>
+
+      <div class="recommended-products-slider" id="productSlider">
+        {% for recommended_product in recommended_products %}
+          <div class="recommended-product-card">
+            <a href="{{ recommended_product.url }}">
+              <img 
+                src="{{ recommended_product.featured_image | image_url: width: 280, height: 280, crop: 'center' }}" 
+                alt="{{ recommended_product.title }}" 
+                loading="lazy" 
+                width="280" 
+                height="280"
+              >
+              <p>{{ recommended_product.title }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <button class="slider-btn next-btn" onclick="scrollSlider(1)">&#10095;</button>
+    </div>
+  {% else %}
+    <p>No recommended products found.</p>
+  {% endif %}
+</section>
+
+<style>
+.recommended-products-wrapper {
+  padding: 2rem 1rem;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.recommended-products-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+.recommended-products-slider::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.recommended-product-card {
+  min-width: 220px;
+  flex-shrink: 0;
+  border: 1px solid #e3e3e3;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.recommended-product-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.5rem;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: #f0f0f0;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+</style>
+
+<script>
+function scrollSlider(direction) {
+  const slider = document.getElementById('productSlider');
+  const cardWidth = slider.querySelector('.recommended-product-card').offsetWidth + 16; // card width + gap
+  slider.scrollBy({
+    left: direction * cardWidth,
+    behavior: 'smooth'
+  });
+}
+</script>
