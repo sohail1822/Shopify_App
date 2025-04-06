@@ -49,3 +49,30 @@ Added metafield to product from Shopify Admin:
 ```bash
 git clone https://github.com/sohail1822/Shopify_App
 cd Shopify_App
+```
+
+## Steps to Upload Theme on Shopify:
+
+### Step 2: Compress Theme Folder (Make Zip)
+
+- Right-click on your theme folder → Click on `Compress to ZIP`  
+- Example: `my-shopify-theme.zip`
+
+---
+
+### Step 3: Upload Theme to Shopify Admin
+
+1. Login to your Shopify Admin Panel.
+2. Navigate to → `Online Store` → `Themes`.
+3. Click on → `Upload Theme`.
+4. Select your `my-shopify-theme.zip` file and upload it.
+
+---
+
+### Step 4: Publish the Uploaded Theme
+
+- After successful upload, go to the uploaded theme → Click on `Actions`.
+- Then click → `Publish`.
+
+---
+
