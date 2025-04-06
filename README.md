@@ -1,13 +1,13 @@
 # Shopify Theme - Recommended Products Section Implementation
 
-## Overview:
+## Overview :
 This project enhances the Shopify Product Detail Page (PDP) by adding a dynamic *Recommended Products* section using Shopify Metafields.
 
 Recommended products are fetched dynamically and displayed beautifully in a responsive slider/carousel with reusable product cards.
 
 ---
 
-## Features Implemented:
+## Features Implemented :
 
 - Fetching Recommended Products using Shopify Metafields.
 - Custom Product Card design.
@@ -19,7 +19,7 @@ Recommended products are fetched dynamically and displayed beautifully in a resp
 
 ---
 
-## Added Files & Their Purpose:
+## Added Files & Their Purpose :
 
 | File Path | Purpose |
 |-----------|---------|
@@ -29,7 +29,7 @@ Recommended products are fetched dynamically and displayed beautifully in a resp
 
 ---
 
-## Metafield Details:
+## Metafield Details :
 
 Added metafield to product from Shopify Admin:
 
@@ -42,7 +42,7 @@ Added metafield to product from Shopify Admin:
 
 ---
 
-## Complete Steps to Upload Theme on Shopify:
+## Complete Steps to Upload Theme on Shopify :
 
 ### Step 1: Clone Github Repository Locally
 
@@ -51,7 +51,7 @@ git clone https://github.com/sohail1822/Shopify_App
 cd Shopify_App
 ```
 
-## Steps to Upload Theme on Shopify:
+## Steps to Upload Theme on Shopify :
 
 ### Step 2: Compress Theme Folder (Make Zip)
 
